@@ -4,7 +4,7 @@ use std::fs::File;
 
 fn test_polars_lazy() -> Result<String> {
     // scan a parquet file lazily
-    LazyFrame::scan_ipc(path: String, stop_after_n_rows: Option<usize>, cache: bool);
+    //LazyFrame::scan_ipc(path: String, stop_after_n_rows: Option<usize>, cache: bool);
     let lf: LazyFrame = LazyFrame::scan_parquet("./test.parquet".into(), None, true);
     println!("{:?}", lf);
 
